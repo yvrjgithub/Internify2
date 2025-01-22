@@ -30,7 +30,7 @@ const submitHandler=async(e)=>{
    dispatch(setLoading(true));
   e.preventDefault();
   try{
-     const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/user/login`,input,{
+     const res = await axios.post(`https://internify2.onrender.com/api/v1/user/login`,input,{
         withCredentials:true
      })
      if(res.data.success){

@@ -42,7 +42,7 @@ const SignUp = () => {
         data.append("file",input.file)
       }
       try{
-         const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/user/register`,data,{
+         const res = await axios.post(`https://internify2.onrender.com/api/v1/user/register`,data,{
             headers:{"Content-Type":'multipart/formadata'},
             withCredentials:true
            })

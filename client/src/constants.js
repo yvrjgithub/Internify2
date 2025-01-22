@@ -1,1 +1,1 @@
-export const API = `${import.meta.env.VITE_BACKEND_URL}/api/v1`
+export const API = `https://internify2.onrender.com/api/v1`

@@ -23,7 +23,7 @@ const Applications = () => {
       try {
         setLoading(true);
         // Fetch applications
-        const appResponse = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v1/application/get`, {
+        const appResponse = await fetch(`https://internify2.onrender.com/api/v1/application/get`, {
           credentials: 'include'
         });
         const appData = await appResponse.json();
@@ -32,7 +32,7 @@ const Applications = () => {
         const appsWithJobs = await Promise.all(
           appData.applications.map(async (app) => {
             try {
-              const jobResponse = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v1/job/get/${app.job}`, {
+              const jobResponse = await fetch(`https://internify2.onrender.com/api/v1/job/get/${app.job}`, {
                 credentials: 'include'
               });
               const jobData = await jobResponse.json();

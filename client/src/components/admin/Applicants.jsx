@@ -16,7 +16,7 @@ const Applicants = () => {
     useEffect(() => {
         const fetchCompanies = async () => {
             try {
-                const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/application/${idd}/applicants`, { withCredentials: true });
+                const response = await axios.get(`https://internify2.onrender.com/api/v1/application/${idd}/applicants`, { withCredentials: true });
                 console.log('API Response:', response.data); // Log the full response
                 setApps(response.data.job.applications); // Update companies list
                 setFilteredCompanies(response.data.jobs); // Initialize filtered list
@@ -31,7 +31,7 @@ const Applicants = () => {
 
     const statusHandler=async(status,id)=>{
         try{
-            const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/application/${id}/status/update`,{status},{withCredentials:true});
+            const res = await axios.post(`https://internify2.onrender.com/api/v1/application/${id}/status/update`,{status},{withCredentials:true});
             if(res.data.success){
                 toast.success(res.data.message)
             }

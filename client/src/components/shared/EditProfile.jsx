@@ -53,7 +53,7 @@ const EditProfile = () => {
 
     console.log(input)
     try{
-       const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/user/profile/update`,data,{
+       const res = await axios.post(`https://internify2.onrender.com/api/v1/user/profile/update`,data,{
         headers:{"Content-Type":'multipart/formadata'},
         withCredentials:true
        })

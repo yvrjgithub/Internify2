@@ -16,7 +16,7 @@ const AdminJobs= () => {
     useEffect(() => {
         const fetchCompanies = async () => {
             try {
-                const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/job/getAdmin`, { withCredentials: true });
+                const response = await axios.get(`https://internify2.onrender.com/api/v1/job/getAdmin`, { withCredentials: true });
                 console.log('API Response:', response.data); // Log the full response
                 setCompanies(response.data.jobs); // Update companies list
                 setFilteredCompanies(response.data.jobs); // Initialize filtered list

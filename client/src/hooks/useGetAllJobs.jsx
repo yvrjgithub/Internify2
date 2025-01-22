@@ -9,7 +9,7 @@ const useGetAllJobs = () => {
     React.useEffect(()=>{
         const fetchAllJobs=async()=>{
             try {
-                const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/job/get?keyword=${searchQuery}`,{withCredentials:true})
+                const res = await axios.get(`https://internify2.onrender.com/api/v1/job/get?keyword=${searchQuery}`,{withCredentials:true})
                 if(res.data.success){
                     dispatch(setAllJobs(res.data.jobs))
                 }
