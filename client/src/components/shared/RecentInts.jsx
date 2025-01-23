@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux';
 
 const RecentInts = () => {
   const {allJobs} = useSelector(store=>store.jobs)
-  console.log(allJobs)
     const jobs = [1,2,3,4,5,6]
   return (
     <div className='w-11/12 mx-auto'>

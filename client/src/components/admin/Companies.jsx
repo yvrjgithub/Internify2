@@ -16,8 +16,7 @@ const Companies = () => {
     useEffect(() => {
         const fetchCompanies = async () => {
             try {
-                const response = await axios.get(`https://internify2.onrender.com/api/v1/company/get`, { withCredentials: true });
-                console.log('API Response:', response.data); // Log the full response
+                const response = await axios.get(`http://localhost:5000/api/v1/company/get`, { withCredentials: true });
                 setCompanies(response.data.companies); // Update companies list
                 setFilteredCompanies(response.data.companies); // Initialize filtered list
             } catch (error) {

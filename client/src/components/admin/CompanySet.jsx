@@ -24,7 +24,6 @@ const CompanySet = () => {
       location: singleCompany.location,
       file:null
     })
-    console.log(ID)
   const changeHandler=(e)=>{
     setInput({...input,[e.target.name]:e.target.value});
   }
@@ -45,7 +44,7 @@ const CompanySet = () => {
     try {
       setLoading(true)
       const res = await axios.put(
-        `https://internify2.onrender.com/api/v1/company/update/${ID}`,
+        `http://localhost:5000/api/v1/company/update/${ID}`,
         formData,
         {
             headers: {

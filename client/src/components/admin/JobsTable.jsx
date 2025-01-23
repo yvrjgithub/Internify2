@@ -17,7 +17,6 @@ import { useNavigate } from 'react-router-dom';
 
 const JobsTable = ({jobs,loading}) => {
   const navigate = useNavigate();
-  console.log(jobs)
   return (
     <div className="my-5">
       <Table>

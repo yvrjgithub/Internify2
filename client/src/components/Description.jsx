@@ -17,7 +17,7 @@ const Description = () => {
   const applyHandler = async () => {
     try {
       const res = await axios.post(
-        `https://internify2.onrender.com/api/v1/application/apply`,
+        `http://localhost:5000/api/v1/application/apply`,
         { job: jobId },  // Send jobId in request body
         { withCredentials: true }
       );
@@ -35,10 +35,9 @@ const Description = () => {
     const fetchJob = async () => {
       try {
         const res = await axios.get(
-          `https://internify2.onrender.com/api/v1/job/get/` + `${jobId}`,
+          `http://localhost:5000/api/v1/job/get/` + `${jobId}`,
           { withCredentials: true }
         );
-        console.log(res);
         if (res.data.success) {
           dispatch(setJob(res.data.job));
         }

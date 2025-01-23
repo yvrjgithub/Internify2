@@ -23,7 +23,7 @@ const Applications = () => {
       try {
         setLoading(true);
         // Fetch applications
-        const appResponse = await fetch(`https://internify2.onrender.com/api/v1/application/get`, {
+        const appResponse = await fetch(`http://localhost:5000/api/v1/application/get`, {
           credentials: 'include'
         });
         const appData = await appResponse.json();
@@ -32,7 +32,7 @@ const Applications = () => {
         const appsWithJobs = await Promise.all(
           appData.applications.map(async (app) => {
             try {
-              const jobResponse = await fetch(`https://internify2.onrender.com/api/v1/job/get/${app.job}`, {
+              const jobResponse = await fetch(`http://localhost:5000/api/v1/job/get/${app.job}`, {
                 credentials: 'include'
               });
               const jobData = await jobResponse.json();
@@ -64,7 +64,6 @@ const Applications = () => {
   if (loading) {
     return <div className="w-11/12 md:w-9/12 mx-auto">Loading...</div>;
   }
-  console.log(apps)
   return (
     <div className="w-11/12 md:w-9/12 mx-auto">
       <Table className="no-scrollbar">

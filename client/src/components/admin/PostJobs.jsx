@@ -28,8 +28,7 @@ const PostJobs = () => {
     React.useEffect(() => {
         const fetchCompanies = async () => {
             try {
-                const response = await axios.get(`https://internify2.onrender.com/api/v1/company/get`, { withCredentials: true });
-                console.log('API Response:', response.data);
+                const response = await axios.get(`http://localhost:5000/api/v1/company/get`, { withCredentials: true });
                 setCompanies(response.data.companies);
             } catch (error) {
                 console.error('Error fetching companies:', error.response || error.message);
@@ -43,7 +42,6 @@ const PostJobs = () => {
 
     const changeHandler = (e) => {
         setInput({ ...input, [e.target.name]: e.target.value });
-        console.log(input)
     };
 
     const submitHandler = async (e) => {
@@ -71,7 +69,7 @@ const PostJobs = () => {
         try {
             setLoading(true);
             const res = await axios.post(
-                `https://internify2.onrender.com/api/v1/job/post`,
+                `http://localhost:5000/api/v1/job/post`,
                 input,
                 {
                     headers: {

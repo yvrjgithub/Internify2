@@ -21,9 +21,8 @@ const CompanyCreate = () => {
         }
 
         try {
-            console.log("Name:", name); // Debugging log
             const res = await axios.post(
-                `https://internify2.onrender.com/api/v1/company/register`,
+                `http://localhost:5000/api/v1/company/register`,
                 { companyName:name },
                 {
                     headers: {
