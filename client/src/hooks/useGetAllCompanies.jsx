@@ -9,7 +9,7 @@ const useGetAllCompanies = () => {
     React.useEffect(() => {
         const fetchCompanies = async () => {
             try {
-                const res = await axios.get(`http://localhost:5000/api/v1/company/get`, {
+                const res = await axios.get(`https://internify2.onrender.com/api/v1/company/get`, {
                     withCredentials: true
                 });
                 

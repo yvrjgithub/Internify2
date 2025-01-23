@@ -44,7 +44,7 @@ const CompanySet = () => {
     try {
       setLoading(true)
       const res = await axios.put(
-        `http://localhost:5000/api/v1/company/update/${ID}`,
+        `https://internify2.onrender.com/api/v1/company/update/${ID}`,
         formData,
         {
             headers: {

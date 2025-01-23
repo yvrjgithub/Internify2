@@ -51,7 +51,7 @@ const EditProfile = () => {
       data.append("file",input.file)
     }
     try{
-       const res = await axios.post(`http://localhost:5000/api/v1/user/profile/update`,data,{
+       const res = await axios.post(`https://internify2.onrender.com/api/v1/user/profile/update`,data,{
         headers:{"Content-Type":'multipart/formadata'},
         withCredentials:true
        })
