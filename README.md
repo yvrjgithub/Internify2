@@ -1,5 +1,5 @@
 # Internify
-![Screenshot 2025-02-22 161449](https://github.com/user-attachments/assets/54f7771e-c922-408a-86d3-ec4ac7f8d712)
+![image](https://github.com/user-attachments/assets/1396c1fc-b6c2-4b87-ba13-583d9b343f5e)
 Internify is a job portal designed to connect students and young professionals with internship opportunities. It provides an intuitive platform for applicants to apply for internships, track their application statuses, and manage their profiles. On the admin side, companies can post internships, review applicants, and manage their listings.
 
 ## Features
